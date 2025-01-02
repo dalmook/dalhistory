@@ -1,0 +1,73 @@
+{
+  "timeline": [
+    {
+      "period": "고조선",
+      "startYear": "-2333",
+      "endYear": "-108",
+      "description": "단군왕검에 의해 세워진 나라"
+    },
+    {
+      "period": "삼국시대",
+      "startYear": "57",
+      "endYear": "668",
+      "description": "고구려, 백제, 신라가 공존한 시기"
+    },
+    {
+      "period": "남북국시대",
+      "startYear": "698",
+      "endYear": "926",
+      "description": "통일신라와 발해가 있던 시기"
+    },
+    {
+      "period": "고려",
+      "startYear": "918",
+      "endYear": "1392",
+      "description": "왕건이 세운 나라로 불교가 번성"
+    },
+    {
+      "period": "조선",
+      "startYear": "1392",
+      "endYear": "1897",
+      "description": "이성계가 세운 유교 국가"
+    },
+    {
+      "period": "대한제국",
+      "startYear": "1897",
+      "endYear": "1910",
+      "description": "대한제국 선포 후 일본의 식민지로 강제 병합"
+    },
+    {
+      "period": "대한민국",
+      "startYear": "1948",
+      "endYear": "현재",
+      "description": "남한의 정부로 현재까지 이어지고 있음"
+    }
+  ],
+  "quiz": [
+    {
+      "question": "고조선을 세운 사람은 누구일까요?",
+      "options": ["단군왕검", "주몽", "온조", "이성계"],
+      "answer": "단군왕검"
+    },
+    {
+      "question": "삼국시대에 해당하지 않는 나라는?",
+      "options": ["고구려", "백제", "가야", "신라"],
+      "answer": "가야"
+    },
+    {
+      "question": "조선의 창건자는 누구인가요?",
+      "options": ["이성계", "왕건", "단군", "세종대왕"],
+      "answer": "이성계"
+    },
+    {
+      "question": "대한제국은 몇 년에 선포되었나요?",
+      "options": ["1897년", "1910년", "1945년", "1392년"],
+      "answer": "1897년"
+    },
+    {
+      "question": "대한민국 정부는 몇 년에 수립되었나요?",
+      "options": ["1945년", "1948년", "1910년", "1897년"],
+      "answer": "1948년"
+    }
+  ]
+}
