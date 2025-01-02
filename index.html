@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>대한민국 국사 연표 학습</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 상단 헤더 -->
+  <header class="header">
+    <h1>대한민국 국사 공부</h1>
+    <nav class="nav">
+      <button id="studyModeBtn">학습 모드</button>
+      <button id="quizModeBtn">퀴즈 모드</button>
+    </nav>
+    <div class="progress-container">
+      <span id="score">점수: 0</span>
+      <span id="progress">진도: 0/5</span>
+    </div>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="검색어를 입력하세요..." />
+      <button id="searchBtn">검색</button>
+    </div>
+  </header>
+
+  <!-- 메인 컨테이너 -->
+  <main class="container">
+    <!-- 학습 모드 화면(타임라인) -->
+    <section id="studyMode" class="hidden">
+      <h2>연표로 배우기</h2>
+      <div id="timelineContainer" class="timeline-container">
+        <!-- JS를 통해 연표 데이터가 동적으로 표시됩니다. -->
+      </div>
+    </section>
+
+    <!-- 퀴즈 모드 화면 -->
+    <section id="quizMode" class="hidden">
+      <h2>퀴즈로 배우기</h2>
+      <div id="quizContainer" class="quiz-container">
+        <!-- JS를 통해 퀴즈가 동적으로 표시됩니다. -->
+      </div>
+      <div class="quiz-nav">
+        <button id="prevBtn">이전 문제</button>
+        <button id="nextBtn">다음 문제</button>
+      </div>
+    </section>
+
+    <!-- 검색 결과 화면 -->
+    <section id="searchResults" class="hidden">
+      <h2>검색 결과</h2>
+      <div id="resultsContainer" class="results-container">
+        <!-- JS를 통해 검색 결과가 동적으로 표시됩니다. -->
+      </div>
+    </section>
+  </main>
+
+  <!-- 하단 푸터 -->
+  <footer class="footer">
+    <p>© 2025 MyHistoryApp</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
