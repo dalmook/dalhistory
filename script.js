@@ -57,10 +57,18 @@ function renderTimeline(filteredData = null) {
     const div = document.createElement("div");
     div.classList.add("timeline-item");
 
-    div.innerHTML = `
-      <h3>${item.period} (${item.startYear} ~ ${item.endYear})</h3>
-      <p>${item.description}</p>
-    `;
+    let content = `<h3>${item.period} (${item.startYear || ""} ~ ${item.endYear || ""})</h3>`;
+    if (item.subPeriods) {
+      content += "<ul>";
+      item.subPeriods.forEach(sub => {
+        content += `<li><strong>${sub.subPeriod}</strong>: ${sub.description}</li>`;
+      });
+      content += "</ul>";
+    } else {
+      content += `<p>${item.description}</p>`;
+    }
+
+    div.innerHTML = content;
     timelineContainer.appendChild(div);
   });
 }
@@ -164,7 +172,11 @@ function performSearch() {
 
   const results = timelineData.filter(item => 
     item.period.toLowerCase().includes(query) ||
-    item.description.toLowerCase().includes(query)
+    (item.subPeriods && item.subPeriods.some(sub => 
+      sub.subPeriod.toLowerCase().includes(query) ||
+      sub.description.toLowerCase().includes(query)
+    )) ||
+    (item.description && item.description.toLowerCase().includes(query))
   );
 
   showSearchResults();
@@ -183,7 +195,6 @@ searchInput.addEventListener("keypress", function(e) {
 quizContainer.addEventListener("change", function(e) {
   const currentQuiz = quizData[currentQuizIndex];
   if (e.target.name === "answer" && !currentQuiz.feedback) {
-    // 실시간으로 사용자 답변을 저장할 수 있지만, 피드백은 '다음' 버튼 클릭 시 제공
     currentQuiz.userAnswer = e.target.value;
   }
 });
